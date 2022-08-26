@@ -37,6 +37,14 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "cloudpickle"]
 
 [[package]]
+name = "certifi"
+version = "2022.6.15"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "colorama"
 version = "0.4.5"
 description = "Cross-platform colored terminal text."
@@ -127,19 +135,20 @@ python-versions = ">=2.7"
 
 [[package]]
 name = "pyppeteer"
-version = "0.2.6"
+version = "1.0.2"
 description = "Headless chrome/chromium automation library (unofficial port of puppeteer)"
 category = "main"
 optional = false
-python-versions = ">=3.6.1,<4.0.0"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
 appdirs = ">=1.4.3,<2.0.0"
+certifi = ">=2021"
 importlib-metadata = ">=1.4"
 pyee = ">=8.1.0,<9.0.0"
 tqdm = ">=4.42.1,<5.0.0"
 urllib3 = ">=1.25.8,<2.0.0"
-websockets = ">=9.1,<10.0"
+websockets = ">=10.0,<11.0"
 
 [[package]]
 name = "pytest"
@@ -228,11 +237,11 @@ python-versions = "*"
 
 [[package]]
 name = "websockets"
-version = "9.1"
+version = "10.3"
 description = "An implementation of the WebSocket Protocol (RFC 6455 & 7692)"
 category = "main"
 optional = false
-python-versions = ">=3.6.1"
+python-versions = ">=3.7"
 
 [[package]]
 name = "zipp"
@@ -249,7 +258,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10.5"
-content-hash = "e1709715de55d6d6f228890c4a90e80ab934acc6b43e74bbba0d39e6bcea260e"
+content-hash = "45c4cc88c9d21109901dabde10a5aa6d96ed6b46187e6076ebeaea6c15282176"
 
 [metadata.files]
 appdirs = [
@@ -259,6 +268,10 @@ appdirs = [
 asynctest = []
 atomicwrites = []
 attrs = []
+certifi = [
+    {file = "certifi-2022.6.15-py3-none-any.whl", hash = "sha256:fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"},
+    {file = "certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
+]
 colorama = [
     {file = "colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
     {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
